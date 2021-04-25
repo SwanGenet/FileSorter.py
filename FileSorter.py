@@ -4,7 +4,7 @@ import shutil
 cwd = os.getcwd() #Current Working Directory
 ls = os.listdir(cwd) #List of files in cwd
     
-directory = ['img','vid','txt','pdf','audio'] #Different dir to create
+directory = ['img','video','txt','pdf','audio'] #Different dir to create
 parent_dir = os.getcwd() 
 mode = 0o666   
 
@@ -17,7 +17,7 @@ while i < len(directory):
 
 img_ext = ('png','jpg','svg','jpeg','gif','tiff','psd','eps','ai','indd','raw')
 txt_ext = ('txt','docx','doc','odt')
-vid_ext = ('avi','mkv','mp4','mov','flv','wvm','webm')
+video_ext = ('avi','mkv','mp4','mov','flv','wvm','webm')
 audio_ext = ('mp3','flac','wav','aac','m4v','wma')
 
 i = 0
@@ -34,7 +34,7 @@ while i < len(ls):
     elif ls[i].endswith(audio_ext):
         shutil.move(ls[i], os.getcwd()+'/audio') #Move files to /audio
 
-    elif ls[i].endswith(vid_ext):
-        shutil.move(ls[i], os.getcwd()+'/vid') #Move files to /vid
+    elif ls[i].endswith(video_ext):
+        shutil.move(ls[i], os.getcwd()+'/video') #Move files to /vid
     i += 1
  
