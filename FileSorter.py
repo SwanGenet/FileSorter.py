@@ -16,7 +16,7 @@ while i < len(directory):
     i += 1
 
 img_ext = ('png','jpg','svg','jpeg','gif','tiff','psd','eps','ai','indd','raw')
-txt_ext = ('txt','docx','doc','odt')
+txt_ext = ('txt','rtf','docx','doc','odt')
 video_ext = ('avi','mkv','mp4','mov','flv','wvm','webm')
 audio_ext = ('mp3','flac','wav','aac','m4v','wma')
 
@@ -30,6 +30,9 @@ while i < len(ls):
 
     elif ls[i].endswith('.pdf'):
         shutil.move(ls[i], os.getcwd()+'/pdf') #Move files to /pdf
+
+    elif ls[i].endswith('.exe'):
+        shutil.move(ls[i], os.getcwd()+'/exe') #Move files to /exe
 
     elif ls[i].endswith(audio_ext):
         shutil.move(ls[i], os.getcwd()+'/audio') #Move files to /audio
